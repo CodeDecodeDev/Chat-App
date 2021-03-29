@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Chat App Client"
-config/icon="res://icon.png"
+config/icon="res://Assets/icon.png"
+
+[autoload]
+
+Network="*res://Scripts/Network.gd"
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Assets/default_env.tres"

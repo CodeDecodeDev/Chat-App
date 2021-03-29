@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Chat.gd" type="Script" id=1]
+
+[node name="Chat" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chat" type="TextEdit" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+syntax_highlighting = true
+minimap_width = 86
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Input" type="LineEdit" parent="."]
+anchor_top = 0.917
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.200012
+margin_right = -124.0
+placeholder_text = "Enter Text Here..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Send" type="Button" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 901.0
+margin_top = -49.0
+margin_right = -1.0
+margin_bottom = -1.0
+text = "Send"
+__meta__ = {
+"_edit_use_anchors_": false
+}
