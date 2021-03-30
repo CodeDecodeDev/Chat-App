@@ -13,6 +13,7 @@ __meta__ = {
 [node name="Chat" type="TextEdit" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+readonly = true
 syntax_highlighting = true
 minimap_width = 86
 __meta__ = {
