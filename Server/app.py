@@ -5,7 +5,7 @@ import threading
 
 # Connection Data
 HOST = '127.0.0.1'
-PORT = 6969
+PORT = 6970
 
 
 # Starting Server
@@ -54,7 +54,7 @@ def receive():
         nickname = client.recv(1024).decode('ascii')
         nicknames.append(nickname)
         clients.append(client)
-
+  
         # Print And Broadcast Nickname
         print(f"{address} Connected as {nickname}")
         broadcast("{} joined!\n".format(nickname).encode('ascii'))
