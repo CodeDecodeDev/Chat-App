@@ -1,16 +1,15 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var socket = PacketPeerUDP.new()
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func connect_to_host(host, nickname):
+	
+	socket.set_dest_address(host, 6969)
 
+	if socket.get_available_packet_count() > 0:
+		var data = socket.get_packet().get_string_from_ascii()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+		if data == "NICK":
+			socket.put_packet(nickname)
