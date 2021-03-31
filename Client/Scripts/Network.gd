@@ -2,6 +2,7 @@ extends Node
 
 var Nickname
 
+
 var socket = StreamPeerTCP.new()
 
 func from_pool_byte_array_u16(array: PoolByteArray, offset: int) -> int:
@@ -80,3 +81,9 @@ func send_to_host(message):
 	var final_bytes : PoolByteArray = to_pool_byte_array_u16(string_bytes.size())
 	final_bytes.append_array(string_bytes)
 	socket.put_data(final_bytes)
+
+func recieve_messages(node):
+	if socket.get_available_bytes() > 0:
+		var data = socket.get_string()
+		if not data == "NICK":
+			node.text += data + "\n"
